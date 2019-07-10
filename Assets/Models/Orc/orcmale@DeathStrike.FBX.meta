@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 222713743390ab5429d6607ca9b1098d
+timeCreated: 1510626160
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: orcmale
+    100002: orcmale 1
+    100004: //RootNode
+    100006: orcmale_bone_0
+    100008: orcmale_bone_100
+    100010: orcmale_bone_101
+    100012: orcmale_bone_102
+    100014: orcmale_bone_103
+    100016: orcmale_bone_104
+    100018: orcmale_bone_105
+    100020: orcmale_bone_106
+    100022: orcmale_bone_107
+    100024: orcmale_bone_108
+    100026: orcmale_bone_109
+    100028: orcmale_bone_110
+    100030: orcmale_bone_111
+    100032: orcmale_bone_112
+    100034: orcmale_bone_113
+    100036: orcmale_bone_114
+    100038: orcmale_bone_115
+    100040: orcmale_bone_117
+    100042: orcmale_bone_118
+    100044: orcmale_bone_119
+    100046: orcmale_bone_12
+    100048: orcmale_bone_120
+    100050: orcmale_bone_121
+    100052: orcmale_bone_122
+    100054: orcmale_bone_123
+    100056: orcmale_bone_125
+    100058: orcmale_bone_126
+    100060: orcmale_bone_129
+    100062: orcmale_bone_13
+    100064: orcmale_bone_130
+    100066: orcmale_bone_131
+    100068: orcmale_bone_132
+    100070: orcmale_bone_133
+    100072: orcmale_bone_134
+    100074: orcmale_bone_135
+    100076: orcmale_bone_136
+    100078: orcmale_bone_137
+    100080: orcmale_bone_138
+    100082: orcmale_bone_139
+    100084: orcmale_bone_14
+    100086: orcmale_bone_141
+    100088: orcmale_bone_142
+    100090: orcmale_bone_143
+    100092: orcmale_bone_145
+    100094: orcmale_bone_146
+    100096: orcmale_bone_15
+    100098: orcmale_bone_19
+    100100: orcmale_bone_20
+    100102: orcmale_bone_21
+    100104: orcmale_bone_22
+    100106: orcmale_bone_23
+    100108: orcmale_bone_24
+    100110: orcmale_bone_25
+    100112: orcmale_bone_26
+    100114: orcmale_bone_27
+    100116: orcmale_bone_28
+    100118: orcmale_bone_30
+    100120: orcmale_bone_31
+    100122: orcmale_bone_32
+    100124: orcmale_bone_33
+    100126: orcmale_bone_34
+    100128: orcmale_bone_35
+    100130: orcmale_bone_36
+    100132: orcmale_bone_37
+    100134: orcmale_bone_38
+    100136: orcmale_bone_39
+    100138: orcmale_bone_4
+    100140: orcmale_bone_40
+    100142: orcmale_bone_41
+    100144: orcmale_bone_42
+    100146: orcmale_bone_5
+    100148: orcmale_bone_53
+    100150: orcmale_bone_54
+    100152: orcmale_bone_55
+    100154: orcmale_bone_56
+    100156: orcmale_bone_57
+    100158: orcmale_bone_58
+    100160: orcmale_bone_59
+    100162: orcmale_bone_6
+    100164: orcmale_bone_60
+    100166: orcmale_bone_61
+    100168: orcmale_bone_62
+    100170: orcmale_bone_63
+    100172: orcmale_bone_64
+    100174: orcmale_bone_66
+    100176: orcmale_bone_67
+    100178: orcmale_bone_69
+    100180: orcmale_bone_7
+    100182: orcmale_bone_70
+    100184: orcmale_bone_71
+    100186: orcmale_bone_72
+    100188: orcmale_bone_73
+    100190: orcmale_bone_74
+    100192: orcmale_bone_75
+    100194: orcmale_bone_76
+    100196: orcmale_bone_77
+    100198: orcmale_bone_78
+    100200: orcmale_bone_79
+    100202: orcmale_bone_8
+    100204: orcmale_bone_80
+    100206: orcmale_bone_81
+    100208: orcmale_bone_82
+    100210: orcmale_bone_83
+    100212: orcmale_bone_84
+    100214: orcmale_bone_85
+    100216: orcmale_bone_86
+    100218: orcmale_bone_87
+    100220: orcmale_bone_88
+    100222: orcmale_bone_89
+    100224: orcmale_bone_9
+    100226: orcmale_bone_90
+    100228: orcmale_bone_91
+    100230: orcmale_bone_92
+    100232: orcmale_bone_93
+    100234: orcmale_bone_94
+    100236: orcmale_bone_95
+    100238: orcmale_bone_96
+    100240: orcmale_bone_97
+    100242: orcmale_bone_98
+    100244: orcmale_bone_99
+    100246: orcmale_bone_ArmL
+    100248: orcmale_bone_ArmR
+    100250: orcmale_bone_Breath
+    100252: orcmale_bone_BTH
+    100254: orcmale_bone_CCH
+    100256: orcmale_bone_CHD
+    100258: orcmale_bone_CSL
+    100260: orcmale_bone_CSR
+    100262: orcmale_bone_Head
+    100264: orcmale_bone_Jaw
+    100266: orcmale_bone_LFingerIndex
+    100268: orcmale_bone_LFingerMiddle
+    100270: orcmale_bone_LFingerPinky
+    100272: orcmale_bone_LFingerRing
+    100274: orcmale_bone_LThumb
+    100276: orcmale_bone_Name
+    100278: orcmale_bone_NameMount
+    100280: orcmale_bone_RFingerIndex
+    100282: orcmale_bone_RFingerMiddle
+    100284: orcmale_bone_RFingerPinky
+    100286: orcmale_bone_RFingerRing
+    100288: orcmale_bone_Root
+    100290: orcmale_bone_RThumb
+    100292: orcmale_bone_ShoulderL
+    100294: orcmale_bone_ShoulderR
+    100296: orcmale_bone_SpineLow
+    100298: orcmale_bone_Waist
+    400000: orcmale
+    400002: orcmale 1
+    400004: //RootNode
+    400006: orcmale_bone_0
+    400008: orcmale_bone_100
+    400010: orcmale_bone_101
+    400012: orcmale_bone_102
+    400014: orcmale_bone_103
+    400016: orcmale_bone_104
+    400018: orcmale_bone_105
+    400020: orcmale_bone_106
+    400022: orcmale_bone_107
+    400024: orcmale_bone_108
+    400026: orcmale_bone_109
+    400028: orcmale_bone_110
+    400030: orcmale_bone_111
+    400032: orcmale_bone_112
+    400034: orcmale_bone_113
+    400036: orcmale_bone_114
+    400038: orcmale_bone_115
+    400040: orcmale_bone_117
+    400042: orcmale_bone_118
+    400044: orcmale_bone_119
+    400046: orcmale_bone_12
+    400048: orcmale_bone_120
+    400050: orcmale_bone_121
+    400052: orcmale_bone_122
+    400054: orcmale_bone_123
+    400056: orcmale_bone_125
+    400058: orcmale_bone_126
+    400060: orcmale_bone_129
+    400062: orcmale_bone_13
+    400064: orcmale_bone_130
+    400066: orcmale_bone_131
+    400068: orcmale_bone_132
+    400070: orcmale_bone_133
+    400072: orcmale_bone_134
+    400074: orcmale_bone_135
+    400076: orcmale_bone_136
+    400078: orcmale_bone_137
+    400080: orcmale_bone_138
+    400082: orcmale_bone_139
+    400084: orcmale_bone_14
+    400086: orcmale_bone_141
+    400088: orcmale_bone_142
+    400090: orcmale_bone_143
+    400092: orcmale_bone_145
+    400094: orcmale_bone_146
+    400096: orcmale_bone_15
+    400098: orcmale_bone_19
+    400100: orcmale_bone_20
+    400102: orcmale_bone_21
+    400104: orcmale_bone_22
+    400106: orcmale_bone_23
+    400108: orcmale_bone_24
+    400110: orcmale_bone_25
+    400112: orcmale_bone_26
+    400114: orcmale_bone_27
+    400116: orcmale_bone_28
+    400118: orcmale_bone_30
+    400120: orcmale_bone_31
+    400122: orcmale_bone_32
+    400124: orcmale_bone_33
+    400126: orcmale_bone_34
+    400128: orcmale_bone_35
+    400130: orcmale_bone_36
+    400132: orcmale_bone_37
+    400134: orcmale_bone_38
+    400136: orcmale_bone_39
+    400138: orcmale_bone_4
+    400140: orcmale_bone_40
+    400142: orcmale_bone_41
+    400144: orcmale_bone_42
+    400146: orcmale_bone_5
+    400148: orcmale_bone_53
+    400150: orcmale_bone_54
+    400152: orcmale_bone_55
+    400154: orcmale_bone_56
+    400156: orcmale_bone_57
+    400158: orcmale_bone_58
+    400160: orcmale_bone_59
+    400162: orcmale_bone_6
+    400164: orcmale_bone_60
+    400166: orcmale_bone_61
+    400168: orcmale_bone_62
+    400170: orcmale_bone_63
+    400172: orcmale_bone_64
+    400174: orcmale_bone_66
+    400176: orcmale_bone_67
+    400178: orcmale_bone_69
+    400180: orcmale_bone_7
+    400182: orcmale_bone_70
+    400184: orcmale_bone_71
+    400186: orcmale_bone_72
+    400188: orcmale_bone_73
+    400190: orcmale_bone_74
+    400192: orcmale_bone_75
+    400194: orcmale_bone_76
+    400196: orcmale_bone_77
+    400198: orcmale_bone_78
+    400200: orcmale_bone_79
+    400202: orcmale_bone_8
+    400204: orcmale_bone_80
+    400206: orcmale_bone_81
+    400208: orcmale_bone_82
+    400210: orcmale_bone_83
+    400212: orcmale_bone_84
+    400214: orcmale_bone_85
+    400216: orcmale_bone_86
+    400218: orcmale_bone_87
+    400220: orcmale_bone_88
+    400222: orcmale_bone_89
+    400224: orcmale_bone_9
+    400226: orcmale_bone_90
+    400228: orcmale_bone_91
+    400230: orcmale_bone_92
+    400232: orcmale_bone_93
+    400234: orcmale_bone_94
+    400236: orcmale_bone_95
+    400238: orcmale_bone_96
+    400240: orcmale_bone_97
+    400242: orcmale_bone_98
+    400244: orcmale_bone_99
+    400246: orcmale_bone_ArmL
+    400248: orcmale_bone_ArmR
+    400250: orcmale_bone_Breath
+    400252: orcmale_bone_BTH
+    400254: orcmale_bone_CCH
+    400256: orcmale_bone_CHD
+    400258: orcmale_bone_CSL
+    400260: orcmale_bone_CSR
+    400262: orcmale_bone_Head
+    400264: orcmale_bone_Jaw
+    400266: orcmale_bone_LFingerIndex
+    400268: orcmale_bone_LFingerMiddle
+    400270: orcmale_bone_LFingerPinky
+    400272: orcmale_bone_LFingerRing
+    400274: orcmale_bone_LThumb
+    400276: orcmale_bone_Name
+    400278: orcmale_bone_NameMount
+    400280: orcmale_bone_RFingerIndex
+    400282: orcmale_bone_RFingerMiddle
+    400284: orcmale_bone_RFingerPinky
+    400286: orcmale_bone_RFingerRing
+    400288: orcmale_bone_Root
+    400290: orcmale_bone_RThumb
+    400292: orcmale_bone_ShoulderL
+    400294: orcmale_bone_ShoulderR
+    400296: orcmale_bone_SpineLow
+    400298: orcmale_bone_Waist
+    4300000: orcmale
+    7400000: DeathStrike
+    9500000: //RootNode
+    13700000: orcmale
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: DeathStrike
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: orcmale
+        weight: 1
+      - path: orcmale 1
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_22
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_23
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_24
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_25
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_26
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_27
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_27/orcmale_bone_36
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_27/orcmale_bone_36/orcmale_bone_41
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_27/orcmale_bone_36/orcmale_bone_41/orcmale_bone_53
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_28
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_28/orcmale_bone_37
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_28/orcmale_bone_37/orcmale_bone_42
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_28/orcmale_bone_37/orcmale_bone_42/orcmale_bone_54
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_30
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_31
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_121
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_Breath
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_BTH
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_CHD
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_9/orcmale_bone_Head/orcmale_bone_Jaw
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_103
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_104
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_105
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_106
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_107
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_108
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_109
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_110
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_111
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_111/orcmale_bone_CCH
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_112
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_113
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_117
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_133
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_133/orcmale_bone_145
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_133/orcmale_bone_146
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_135
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_141
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_CSL
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerIndex
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerIndex/orcmale_bone_57
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerMiddle
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerMiddle/orcmale_bone_58
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerPinky
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerPinky/orcmale_bone_59
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerRing
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LFingerRing/orcmale_bone_55
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LThumb
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_38/orcmale_bone_LThumb/orcmale_bone_56
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_129
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_130
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_32/orcmale_bone_131
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_120
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderL/orcmale_bone_ArmL/orcmale_bone_123
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_118
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_39
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_39/orcmale_bone_134
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_132
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_136
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_137
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_138
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_139
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_142
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_143
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_CSR
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerIndex
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerIndex/orcmale_bone_64
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerMiddle
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerMiddle/orcmale_bone_63
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerPinky
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerPinky/orcmale_bone_62
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerRing
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RFingerRing/orcmale_bone_60
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RThumb
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_33/orcmale_bone_40/orcmale_bone_RThumb/orcmale_bone_61
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_119
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_4/orcmale_bone_ShoulderR/orcmale_bone_ArmR/orcmale_bone_122
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_91
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_92
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_93
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_94
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_95
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_96
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_97
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_98
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_99
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_100
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_101
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_SpineLow/orcmale_bone_102
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_5
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_5/orcmale_bone_12
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_6
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_6/orcmale_bone_13
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_6/orcmale_bone_13/orcmale_bone_19
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7/orcmale_bone_14
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7/orcmale_bone_14/orcmale_bone_20
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7/orcmale_bone_14/orcmale_bone_20/orcmale_bone_34
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7/orcmale_bone_14/orcmale_bone_20/orcmale_bone_125
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_7/orcmale_bone_14/orcmale_bone_115
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8/orcmale_bone_15
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8/orcmale_bone_15/orcmale_bone_21
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8/orcmale_bone_15/orcmale_bone_21/orcmale_bone_35
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8/orcmale_bone_15/orcmale_bone_21/orcmale_bone_126
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_8/orcmale_bone_15/orcmale_bone_114
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_86
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_87
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_88
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_89
+        weight: 1
+      - path: orcmale 1/orcmale_bone_0/orcmale_bone_Root/orcmale_bone_Waist/orcmale_bone_90
+        weight: 1
+      - path: orcmale 1/orcmale_bone_66
+        weight: 1
+      - path: orcmale 1/orcmale_bone_67
+        weight: 1
+      - path: orcmale 1/orcmale_bone_69
+        weight: 1
+      - path: orcmale 1/orcmale_bone_70
+        weight: 1
+      - path: orcmale 1/orcmale_bone_71
+        weight: 1
+      - path: orcmale 1/orcmale_bone_72
+        weight: 1
+      - path: orcmale 1/orcmale_bone_73
+        weight: 1
+      - path: orcmale 1/orcmale_bone_74
+        weight: 1
+      - path: orcmale 1/orcmale_bone_75
+        weight: 1
+      - path: orcmale 1/orcmale_bone_76
+        weight: 1
+      - path: orcmale 1/orcmale_bone_77
+        weight: 1
+      - path: orcmale 1/orcmale_bone_78
+        weight: 1
+      - path: orcmale 1/orcmale_bone_79
+        weight: 1
+      - path: orcmale 1/orcmale_bone_80
+        weight: 1
+      - path: orcmale 1/orcmale_bone_81
+        weight: 1
+      - path: orcmale 1/orcmale_bone_82
+        weight: 1
+      - path: orcmale 1/orcmale_bone_83
+        weight: 1
+      - path: orcmale 1/orcmale_bone_84
+        weight: 1
+      - path: orcmale 1/orcmale_bone_85
+        weight: 1
+      - path: orcmale 1/orcmale_bone_Name
+        weight: 1
+      - path: orcmale 1/orcmale_bone_NameMount
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
