@@ -127,7 +127,8 @@ namespace DefaultNamespace.Entitys
 
         public void CommandAttack()
         {
-            CharaCtl.SendCommand(_cmds.cAtkL);
+            _cmds.cSkill.skillID = 2;
+            CharaCtl.SendCommand(_cmds.cSkill);
         }
 
         public void CommandParry()

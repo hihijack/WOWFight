@@ -23,11 +23,9 @@ public class AnimListener : MonoBehaviour
 
     public void StartDmgCheck()
     {
-        ctl.SetDmgCheck(true);
     }
 
     public void EndDmgCheck()
     {
-        ctl.SetDmgCheck(false);
     }
 }

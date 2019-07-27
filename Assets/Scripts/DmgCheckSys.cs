@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Cinemachine;
+using DefaultNamespace.GameData;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -10,86 +11,109 @@ namespace DefaultNamespace
     public class DmgCheckSys
     {
         private CharacterCtl _charaCtl;
-        private bool _enable;
         private List<CharacterCtl> _extends; //判断除外列表.受击一次后加入列表.每次开启重置
+
+        private bool _opening;
+        
         public DmgCheckSys(CharacterCtl ctl)
         {
             _charaCtl = ctl;
             _extends = new List<CharacterCtl>(10);
         }
-
         
-        /// <summary>
-        /// 伤害判定开关
-        /// </summary>
-        /// <param name="enable"></param>
-        public void SetDmgCheckEnable(bool enable)
-        {
-            if (enable && !_enable)
-            {
-                //当开启
-                _extends.Clear();
-            }
-            _enable = enable;
-        }
-
+        
         /// <summary>
         /// 更新
         /// </summary>
         public void Update()
         {
-            if (_enable)
+            //从表中取盒信息
+            SKillRect[] dmgBoxs = _charaCtl.GetDmgRects();
+            if (dmgBoxs != null && dmgBoxs.Length > 0)
             {
-                Vector3 center = new Vector3(0,0.78f,0.884f);
-                Vector2 size = new Vector2(1.14f, 0.45f);
-               
-                //本地坐标转世界坐标
-                center = _charaCtl.transform.localToWorldMatrix.MultiplyPoint(center);
-                Vector3 rectPos = new Vector3(center.x - 0.5f * size.x, center.y - 0.5f * size.y, center.z);
-                var boxHurt = new Rect(rectPos, size);
-               
-                
-                
-                if (_charaCtl.RoleUnit.camp == ECamp.Allies)
+                if (!_opening)
                 {
-                   //遍历所有敌人
-                    foreach (var roleT in GameManager.Inst.aiCtls)
+                    OnOpenDmgBox();
+                }
+                _opening = true;
+            }
+            else
+            {
+                _opening = false;
+            }
+            
+            if (!_opening) return;
+                
+            if (_charaCtl.RoleUnit.camp == ECamp.Allies)
+            {
+                //遍历所有敌人
+                foreach (var roleT in GameManager.Inst.aiCtls)
+                {
+                    if (roleT.CharaCtl == _charaCtl || !roleT.CharaCtl.hurtedEnable || _extends.Contains(roleT.CharaCtl))
                     {
-                        if (roleT.CharaCtl == _charaCtl || !roleT.CharaCtl.hurtedEnable || _extends.Contains(roleT.CharaCtl))
-                        {
-                            continue;
-                        }
-
-                        if (CheckACtl(boxHurt, roleT.CharaCtl))
-                        {
-                            _charaCtl.OnHitOther(roleT.CharaCtl,boxHurt.center);
-                            _extends.Add(roleT.CharaCtl);
-                        }
+                        continue;
                     }
-                }else if (_charaCtl.RoleUnit.camp == ECamp.Monster)
-                {
-                    
-                    //检测玩家
-                    var roleT = GameManager.Inst.targetRole;
-                    if (roleT.CharaCtl.hurtedEnable && !_extends.Contains(roleT.CharaCtl) && CheckACtl(boxHurt, roleT.CharaCtl))
+
+                    Vector3 hitPoint;
+                    if (CheckHitTarget(_charaCtl, roleT.CharaCtl, out hitPoint))
                     {
-                        _charaCtl.OnHitOther(roleT.CharaCtl,boxHurt.center);
+                        _charaCtl.OnHitOther(roleT.CharaCtl,hitPoint);
                         _extends.Add(roleT.CharaCtl);
                     }
                 }
+            }else if (_charaCtl.RoleUnit.camp == ECamp.Monster)
+            {
+                    
+                //检测玩家
+                var roleT = GameManager.Inst.targetRole;
+                Vector3 hitPoint;
+                if (roleT.CharaCtl.hurtedEnable && !_extends.Contains(roleT.CharaCtl) && CheckHitTarget(_charaCtl, roleT.CharaCtl, out hitPoint))
+                {
+                    _charaCtl.OnHitOther(roleT.CharaCtl,hitPoint);
+                    _extends.Add(roleT.CharaCtl);
+                }
             }
         }
-
-        bool CheckACtl(Rect hurtBox, CharacterCtl other)
+        
+        /// <summary>
+        /// 当激活伤害盒
+        /// </summary>
+        private void OnOpenDmgBox()
         {
-            var cc = other.GetCharacterController();
-            Vector2 center = other.transform.position + cc.center;
-            Vector2 size = new Vector2(2 * cc.radius, cc.height);
-            Vector2 rectPos = new Vector2(center.x - size.x * 0.5f, center.y - size.y * 0.5f);
-            //判断重叠
-            Rect rt = new Rect(rectPos, size);
-           
-            return rt.Overlaps(hurtBox);
+            _extends.Clear();
+        }
+
+        /// <summary>
+        /// 检测dmger的伤害盒是否与目标的身位盒重叠
+        /// </summary>
+        /// <param name="dmger"></param>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        bool CheckHitTarget(CharacterCtl dmger, CharacterCtl other, out Vector3 hitPoint)
+        {
+            Rect[] rectsDmg = dmger.GetWorldDmgRects();
+            if (rectsDmg != null && rectsDmg.Length > 0)
+            {
+                Rect[] rectsBody = other.GetWorldBodyRects();
+                for (int i = 0; i < rectsDmg.Length; i++)
+                {
+                    var dmgRect = rectsDmg[i];
+                    if (dmgRect.size != Vector2.zero)
+                    {
+                        for (int j = 0; j < rectsBody.Length; j++)
+                        {
+                            var bodyRect = rectsBody[j];
+                            if (bodyRect.size != Vector2.zero && dmgRect.Overlaps(bodyRect))
+                            {
+                                hitPoint = dmgRect.center;
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            hitPoint = Vector3.zero;
+            return false;
         }
     }
 }

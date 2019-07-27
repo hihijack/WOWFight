@@ -81,4 +81,9 @@ public class AnimCtl : MonoBehaviour
     {
         animator.Play("Parry", 0, 0);
     }
+
+    public void Play(string anim)
+    {
+        animator.Play(anim, 0, 0);
+    }
 }

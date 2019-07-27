@@ -30,6 +30,12 @@ namespace DefaultNamespace.AICore
             base.Active();
             status = EAIGoalStatus.Actived;
 
+            if (target == null || target.alive == false)
+            {
+                status = EAIGoalStatus.Fail;
+                return;
+            }
+            
             var dir = (owner.Pos - target.Pos).normalized;
             Vector3 pointA = target.Pos + dir * near;
             Vector3 pointB = target.Pos + dir * far;

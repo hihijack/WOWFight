@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DefaultNamespace.Entitys;
 
 public enum EAtkType
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         Inst = this;
         mInputManager = new InputManager();
+        Application.targetFrameRate = 60;
     }
 
     private void Start()

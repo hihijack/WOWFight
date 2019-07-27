@@ -72,4 +72,10 @@ public class BattleStateRun : IBattleState
         fSMManager.bsStiff.frameDur = frameCount;
         return fSMManager.bsStiff;
     }
+
+    public override IBattleState ActionSkill(int skillID)
+    {
+        fSMManager.bsSKill.skillID = skillID;
+        return fSMManager.bsSKill;
+    }
 }

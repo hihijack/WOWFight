@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using DefaultNamespace.SkillPlayable;
+using UnityEngine;
 
 namespace DefaultNamespace.Entitys
 {
     public class RoleUnit : MonoBehaviour
     {
         private CharacterCtl _charaCtl;
-
+        
         CharacterInfo _data;
 
         public ECamp camp;
@@ -19,7 +21,7 @@ namespace DefaultNamespace.Entitys
             InitInfoData();
         }
 
-             
+
         private void InitInfoData()
         {
             _data = new CharacterInfo();
@@ -78,6 +80,12 @@ namespace DefaultNamespace.Entitys
                     //受击硬直
                     roleOther.CharaCtl.GetFSM().ActionStiff(14);      
                 }
+            }
+
+            if (GameManager.Inst.targetRole == this)
+            {
+                //设置攻击目标
+                GameManager.Inst.targetRole.atkTarget = roleOther;
             }
         }
         

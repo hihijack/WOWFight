@@ -20,7 +20,9 @@ public class InputManager : BaseInput
 
         if (Input.GetButton("AtkL"))
         {
-            GameManager.Inst.targetRole.CharaCtl.SendCommand(cAtkL);
+//            GameManager.Inst.targetRole.CharaCtl.SendCommand(cAtkL);
+            cSkill.skillID = 2;
+            GameManager.Inst.targetRole.CharaCtl.SendCommand(cSkill);
         }
 
         if (Input.GetButtonDown("AtkH"))
@@ -83,6 +85,13 @@ public class InputManager : BaseInput
             GameManager.Inst.targetRole.CharaCtl.SendCommand(cParry);
         }
 
+        if (Input.GetButtonDown("LT"))
+        {
+            //TODO
+            cSkill.skillID = 3;
+            GameManager.Inst.targetRole.CharaCtl.SendCommand(cSkill);
+        }
+        
         if (!rush)
         {
             cMove.h = axisH;

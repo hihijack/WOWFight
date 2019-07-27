@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using DefaultNamespace;
 using DefaultNamespace.Entitys;
+using DefaultNamespace.GameData;
+using DefaultNamespace.SkillPlayable;
 
 public class CharacterCtl : MonoBehaviour {
 
@@ -22,12 +24,20 @@ public class CharacterCtl : MonoBehaviour {
     public bool hurtedEnable = true;
 
     public RoleUnit RoleUnit { get; set; }
-
+    
+    private SkillDirector _skillDirector;
+    
+    //事先开辟内存
+    Rect[] _rectsDmgCache = new Rect[5];
+    Rect[] _rectsBodyCache = new Rect[5];
+    
     void Awake()
     {
         cc = GetComponent<CharacterController>();
         animEventListner.Init(this);
         _dmgCheckSys = new DmgCheckSys(this);
+        _skillDirector = new SkillDirector(this);
+        _skillDirector.onBehavAutoEnd = OnSKillBehavEnd;
     }
 
     
@@ -171,6 +181,7 @@ public class CharacterCtl : MonoBehaviour {
     internal void OnBSStartStiff()
     {
         animCtl.ToStiff();
+        _skillDirector.Stop();
     }
 
 
@@ -222,16 +233,33 @@ public class CharacterCtl : MonoBehaviour {
         animCtl.ToRush();
     }
 
+    
+    public void OnBStartSkill(int skillID)
+    {
+        _skillDirector.CreateBehav(skillID);
+       
+    }
+    
+    
+    public void OnBSUpdateSkill()
+    {
+        _skillDirector.Process();
+    }
     #endregion
 
     /// <summary>
-    /// 开关伤害检测
+    /// 技能行为结束回调;自然结束时触发
     /// </summary>
-    /// <param name="v"></param>
-    internal void SetDmgCheck(bool open)
+    private void OnSKillBehavEnd()
     {
-       _dmgCheckSys.SetDmgCheckEnable(open);
+       mFSMManager.ActionSkilEnd();
     }
+
+    public SkillDirector GetSkillDirector()
+    {
+        return _skillDirector;
+    }
+  
 
     internal void OnHitOther(CharacterCtl ctlOther, Vector3 point)
     {
@@ -249,12 +277,124 @@ public class CharacterCtl : MonoBehaviour {
     {
         cc.enabled = false;
         hurtedEnable = false;
-        _dmgCheckSys.SetDmgCheckEnable(false);
         animCtl.ToDeath();
     }
 
     public bool IsInState(EBSType type)
     {
         return GetFSM().CurState.type == type;
+    }
+
+    /// <summary>
+    /// 取身位盒
+    /// </summary>
+    /// <returns></returns>
+    public SKillRect[] GetBodyRects()
+    {
+        SKillRect[] r = null;
+        if (IsInState(EBSType.SKill))
+        {
+            //技能状态下取技能导演的身位盒
+            r = GetSkillDirector().GetCurBodyBox();
+        }
+        else
+        {
+            //其他状态下取默认身位盒
+            r = GetDefBodyBoxs();
+        }
+
+        return r;
+    }
+
+    public Rect[] GetWorldBodyRects()
+    {
+        Rect[] r = null;
+        SKillRect[] localRects = GetBodyRects();
+        if (localRects != null && localRects.Length > 0)
+        {
+            for (int i = 0; i < _rectsBodyCache.Length; i++)
+            {
+                if (i < localRects.Length)
+                {
+                    _rectsBodyCache[i] = LocalRect2WorldRect(localRects[i]);
+                }
+                else
+                {
+                    _rectsBodyCache[i].size = Vector2.zero;
+                }
+            }
+
+            return _rectsBodyCache;
+        }
+        return r;
+    }
+
+    /// <summary>
+    /// 本地盒转世界坐标系
+    /// </summary>
+    /// <param name="localRect"></param>
+    /// <returns></returns>
+    private Rect LocalRect2WorldRect(SKillRect localRect)
+    {
+       var center = transform.localToWorldMatrix.MultiplyPoint(new Vector3(0, localRect.center.y, localRect.center.x));
+       Vector3 rectPos = new Vector3(center.x - 0.5f * localRect.size.x, center.y - 0.5f * localRect.size.y, center.z);
+       return new Rect(rectPos, localRect.size);
+    }
+
+    /// <summary>
+    /// 取伤害盒
+    /// </summary>
+    /// <returns></returns>
+    public SKillRect[] GetDmgRects()
+    {
+        return GetSkillDirector().GetCurDmgBox();
+    }
+
+    /// <summary>
+    /// 取世界坐标系的伤害盒
+    /// </summary>
+    /// <returns></returns>
+    public Rect[] GetWorldDmgRects()
+    {
+        Rect[] r = null;
+        SKillRect[] localRects = GetDmgRects();
+        if (localRects != null && localRects.Length > 0)
+        {
+            for (int i = 0; i < _rectsDmgCache.Length; i++)
+            {
+                if (i < localRects.Length)
+                {
+                    _rectsDmgCache[i] = LocalRect2WorldRect(localRects[i]);
+                }
+                else
+                {
+                    _rectsDmgCache[i].size = Vector2.zero;
+                }
+            }
+
+            return _rectsDmgCache;
+        }
+        return r;
+    }
+    
+    /// <summary>
+    /// 默认状态下的身位盒
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    private SKillRect[] GetDefBodyBoxs()
+    {
+        SKillRect[] r = null;
+        SKillDataNode data = GameDataMgr.Inst.skillTable.GetData(1);
+        if (data.isValid())
+        {
+            var skillBoxInfo = data.FindBodyBoxInfo(0);
+            if (skillBoxInfo.isValid())
+            {
+                r = skillBoxInfo.rects;
+            }
+        }
+
+        return r;
     }
 }

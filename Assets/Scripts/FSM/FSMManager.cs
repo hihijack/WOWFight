@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace.FSM;
 
 public class FSMManager
 {
@@ -15,7 +16,8 @@ public class FSMManager
     public BattleStateRoll bsRoll;
     public BattleStateStiff bsStiff;
     public BattleStateJumpBack bsJumpBack;
-
+    public BattleStateSkill bsSKill;
+    
     public IBattleState CurState
     {
         get
@@ -42,6 +44,7 @@ public class FSMManager
         bsRoll = new BattleStateRoll(this);
         bsStiff = new BattleStateStiff(this);
         bsJumpBack = new BattleStateJumpBack(this);
+        bsSKill = new BattleStateSkill(this);
     }
 
     public void Update()
@@ -203,6 +206,30 @@ public class FSMManager
         if (CurState != null)
         {
             IBattleState next = CurState.ActionRush(h, v);
+            if (next != CurState)
+            {
+                ChangeState(next);
+            }
+        }
+    }
+
+    internal void ActionSkill(int skillID)
+    {
+        if (CurState != null)
+        {
+            IBattleState next = CurState.ActionSkill(skillID);
+            if (next != CurState)
+            {
+                ChangeState(next);
+            }
+        }
+    }
+
+    internal void ActionSkilEnd()
+    {
+        if (CurState != null)
+        {
+            IBattleState next = CurState.ActionSkillEnd();
             if (next != CurState)
             {
                 ChangeState(next);

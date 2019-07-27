@@ -54,4 +54,10 @@
     {
         return fSMManager.bsParry;
     }
+
+    public override IBattleState ActionSkill(int skillID)
+    {
+        fSMManager.bsSKill.skillID = skillID;
+        return fSMManager.bsSKill;
+    }
 }

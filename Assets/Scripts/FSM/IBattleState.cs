@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 public enum EBSType
 {
@@ -11,7 +12,8 @@ public enum EBSType
     Rush,
     Roll,
     JumpBack,
-    Power
+    Power,
+    SKill
 }
 
 public class IBattleState
@@ -89,6 +91,20 @@ public class IBattleState
     }
 
     public virtual IBattleState ActionParry()
+    {
+        return null;
+    }
+
+    public virtual IBattleState ActionSkill(int skillID)
+    {
+        return null;
+    }
+
+    /// <summary>
+    /// 技能自然结束
+    /// </summary>
+    /// <returns></returns>
+    public  virtual IBattleState ActionSkillEnd()
     {
         return null;
     }

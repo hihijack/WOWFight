@@ -14,7 +14,7 @@ namespace DefaultNamespace.AICore.GoalEvaluation
             RoleUnit target = owner.GetSensoryMemory().target;
             if (target != null)
             {
-                if (owner.CheckDisIsNear(target, 2) && (target.CharaCtl.IsInState(EBSType.AtkBofere) || target.CharaCtl.IsInState(EBSType.Power)))
+                if (owner.CheckDisIsNear(target, 2) && (target.CharaCtl.IsInState(EBSType.SKill) || target.CharaCtl.IsInState(EBSType.Power)))
                 {
                     r = 1;
                 }
