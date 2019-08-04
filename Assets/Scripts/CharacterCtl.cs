@@ -5,6 +5,7 @@ using DefaultNamespace;
 using DefaultNamespace.Entitys;
 using DefaultNamespace.GameData;
 using DefaultNamespace.SkillPlayable;
+using UnityEditor;
 
 public class CharacterCtl : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class CharacterCtl : MonoBehaviour {
     public float rollSpeed;
     public float jumpBackSpeed;
 
+    public bool showBoxDebugInfo;
+    
     public AnimCtl animCtl;
     public AnimListener animEventListner;
     
@@ -60,7 +63,33 @@ public class CharacterCtl : MonoBehaviour {
         mCommands.Clear();
     }
 
-    
+    private void OnDrawGizmos()
+    {
+        if (showBoxDebugInfo && Application.isPlaying)
+        {
+            Rect[] dmgRects = GetWorldDmgRects();
+            if (dmgRects != null)
+            {
+                foreach (var box in dmgRects)
+                {
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawWireCube(box.center, box.size);
+                }
+            }
+
+            Rect[] bodyRects = GetWorldBodyRects();
+            if (bodyRects != null)
+            {
+                foreach (var bodyBox in bodyRects)
+                {
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawWireCube(bodyBox.center, bodyBox.size);
+                }
+            }
+        }
+    }
+
+
     #region Commands
     List<ICommand> mCommands = new List<ICommand>();
 
@@ -347,7 +376,8 @@ public class CharacterCtl : MonoBehaviour {
     /// <returns></returns>
     public SKillRect[] GetDmgRects()
     {
-        return GetSkillDirector().GetCurDmgBox();
+        var director = GetSkillDirector();
+        return director != null ? director.GetCurDmgBox() : null;
     }
 
     /// <summary>

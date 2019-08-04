@@ -28,7 +28,10 @@ namespace DefaultNamespace.GameData
     {
         public int id;
         public string name;
-        public float dmgParam;
+        
+        [Header("效果")]
+        public SkillDmgInfo[] dmgInfos;
+        
         [Title("身位盒", HorizontalLine = false)] public SkillBoxInfo[] bodys;
         [Header("伤害盒")] public SkillBoxInfo[] dmgBoxs;
 
@@ -78,6 +81,18 @@ namespace DefaultNamespace.GameData
         }
     }
 
+    /// <summary>
+    /// 技能效果信息
+    /// </summary>
+    [Serializable]
+    public struct SkillDmgInfo
+    {
+        [Header("招式类型")]
+        public ESkillTrickType trickType;
+        [Header("伤害系数")]
+        public float dmg;
+    }
+    
     [Serializable]
     public struct SkillBoxInfo
     {
@@ -109,6 +124,17 @@ namespace DefaultNamespace.GameData
     {
         PlayAnim,
         Effect
+    }
+
+    /// <summary>
+    /// 技能招式分类
+    /// </summary>
+    public enum ESkillTrickType
+    {
+        Normal,//普通
+        Stab, //刺击
+        Proj, //投射物
+        Engrgy //能量
     }
     
     [Serializable]

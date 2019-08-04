@@ -12,6 +12,8 @@ namespace DefaultNamespace.Entitys
         private AISensoryMemory _sensoryMemory;
         private BaseInput _cmds;
 
+        public bool enableAI;
+        
         protected override void Awake()
         {
             base.Awake();
@@ -31,12 +33,16 @@ namespace DefaultNamespace.Entitys
             base.Update();
             
             _sensoryMemory.UpdateVision();
-        
-            brain.Process();
-            if (Time.frameCount % 60 == 0)
+
+            if (enableAI)
             {
-                brain.Arbitare();
+                brain.Process();
+                if (Time.frameCount % 60 == 0)
+                {
+                    brain.Arbitare();
+                }
             }
+
         }
         
         public AISensoryMemory GetSensoryMemory()
