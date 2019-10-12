@@ -41,6 +41,11 @@ namespace DefaultNamespace.AIBehavoirTree
 
         public override TaskStatus OnUpdate()
         {
+            if (!roleOwner.alive)
+            {
+                return TaskStatus.Failure;
+            }
+            
             roleOwner.CommandMoveTo(moveTargetPoint.Value, moveType, keepFaceToTarget ? roleTarget : null);
             if (IsStuck())
             {

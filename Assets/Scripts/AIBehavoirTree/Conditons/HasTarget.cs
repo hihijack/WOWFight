@@ -10,7 +10,7 @@ namespace DefaultNamespace.AIBehavoirTree
     [TaskDescription("是否有目标")]
     public class HasTarget : Conditional
     {
-        public SharedRoleUnitNPC owner;
+        public SharedObject owner;
 
         public override TaskStatus OnUpdate()
         {
@@ -18,8 +18,10 @@ namespace DefaultNamespace.AIBehavoirTree
             {
                 return TaskStatus.Failure;
             }
+
+            var roleOwner = owner.Value as RoleUnit_NPC;
             
-            if (owner.Value.GetSensoryMemory().target != null)
+            if (roleOwner.GetSensoryMemory().target != null)
             {
                 return TaskStatus.Success;
             }

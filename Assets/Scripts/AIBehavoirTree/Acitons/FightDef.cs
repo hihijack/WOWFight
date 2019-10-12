@@ -24,6 +24,12 @@ namespace DefaultNamespace.AIBehavoirTree
 
         public override TaskStatus OnUpdate()
         {
+
+            if (!roleOwner.alive)
+            {
+                return TaskStatus.Failure;
+            }
+            
             if (roleOwner.CharaCtl.IsInState(EBSType.Parry))
             {
                 return TaskStatus.Success;

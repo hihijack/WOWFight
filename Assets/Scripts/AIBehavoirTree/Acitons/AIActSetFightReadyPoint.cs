@@ -26,7 +26,7 @@ namespace DefaultNamespace.AIBehavoirTree
 
         public override TaskStatus OnUpdate()
         {
-            if (!roleTarget.alive)
+            if (!roleTarget.alive || !roleOwner.alive)
             {
                 return TaskStatus.Failure;
             }

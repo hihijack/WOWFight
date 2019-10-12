@@ -22,6 +22,11 @@ namespace DefaultNamespace.AIBehavoirTree
 
         public override TaskStatus OnUpdate()
         {
+            if (!roleOwner.alive)
+            {
+                return TaskStatus.Failure;
+            }
+            
             if (roleOwner.IsFaceToTarget(roleOwner.GetSensoryMemory().target))
             {
                 roleOwner.FaceToTarget(roleOwner.GetSensoryMemory().target);

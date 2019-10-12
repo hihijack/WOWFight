@@ -1,6 +1,7 @@
 ﻿using System;
 using BehaviorDesigner.Runtime;
 using DefaultNamespace.AI;
+using DefaultNamespace.AIBehavoirTree;
 using DefaultNamespace.AICore;
 using UnityEngine;
 
@@ -61,7 +62,7 @@ namespace DefaultNamespace.Entitys
             }
             else
             {
-                _behaviorTree.StopAllTaskCoroutines();
+                _behaviorTree.StopAllCoroutines();
             }
         }
 
@@ -196,6 +197,19 @@ namespace DefaultNamespace.Entitys
         public void CommandJumpBack()
         {
             _cmds.cRoll.dir = Vector3.zero;
+            CharaCtl.SendCommand(_cmds.cRoll);
+        }
+
+        public void CommandRoll(EAIRollDir dir)
+        {
+            if (dir == EAIRollDir.Forward)
+            {
+                _cmds.cRoll.dir = new Vector3(Forward.x, 0, 0);
+            }else if (dir == EAIRollDir.Back)
+            {
+                _cmds.cRoll.dir = new Vector3(-1 * Forward.x, 0, 0);
+            }
+            
             CharaCtl.SendCommand(_cmds.cRoll);
         }
     }

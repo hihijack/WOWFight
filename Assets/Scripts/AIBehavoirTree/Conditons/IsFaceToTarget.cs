@@ -9,8 +9,8 @@ namespace DefaultNamespace.AIBehavoirTree
     [TaskDescription("是否朝向目标")]
     public class IsFaceToTarget : Conditional
     {
-        public SharedObject target;
         public SharedObject owner;
+        public SharedObject target;
         private RoleUnit roleTaget;
         private RoleUnit roleOwner;
         public override void OnStart()

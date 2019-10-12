@@ -78,4 +78,10 @@ public class BattleStateRun : IBattleState
         fSMManager.bsSKill.skillID = skillID;
         return fSMManager.bsSKill;
     }
+
+    public override IBattleState ActionJumpBack(int fDur)
+    {
+        fSMManager.bsJumpBack.fDur = fDur;
+        return fSMManager.bsJumpBack;
+    }
 }
