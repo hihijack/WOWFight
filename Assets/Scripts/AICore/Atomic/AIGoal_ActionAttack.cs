@@ -37,7 +37,7 @@ namespace DefaultNamespace.AICore
             }
             else
             {
-                owner.CommandAttack();
+                owner.CommandAttack(2);
             }
             return status;
         }

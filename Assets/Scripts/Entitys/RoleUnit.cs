@@ -152,6 +152,18 @@ namespace DefaultNamespace.Entitys
         {
             return target.transform.forward.x * (target.Pos.x - this.Pos.x) < 0;
         }
+
+        public bool IsFaceToTarget(RoleUnit target)
+        {
+            return Forward.x * (Pos.x - target.Pos.x) < 0;
+        }
+
+        public void FaceToTarget(RoleUnit target)
+        {
+            Vector3 f = Forward;
+            f.x = Mathf.Sign(target.Pos.x - Pos.x);
+            Forward = f;
+        }
         
         protected  virtual  void Start()
         {

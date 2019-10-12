@@ -123,7 +123,8 @@ namespace DefaultNamespace.GameData
     public enum EPlayableNodeType
     {
         PlayAnim,
-        Effect
+        Effect,
+        Move
     }
 
     /// <summary>

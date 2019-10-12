@@ -1,4 +1,5 @@
 ﻿using DefaultNamespace.Entitys;
+using UnityEngine;
 
 namespace DefaultNamespace.AICore
 {

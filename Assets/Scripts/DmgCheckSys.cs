@@ -95,18 +95,21 @@ namespace DefaultNamespace
             if (rectsDmg != null && rectsDmg.Length > 0)
             {
                 Rect[] rectsBody = other.GetWorldBodyRects();
-                for (int i = 0; i < rectsDmg.Length; i++)
+                if (rectsBody != null)
                 {
-                    var dmgRect = rectsDmg[i];
-                    if (dmgRect.size != Vector2.zero)
+                    for (int i = 0; i < rectsDmg.Length; i++)
                     {
-                        for (int j = 0; j < rectsBody.Length; j++)
+                        var dmgRect = rectsDmg[i];
+                        if (dmgRect.size != Vector2.zero)
                         {
-                            var bodyRect = rectsBody[j];
-                            if (bodyRect.size != Vector2.zero && dmgRect.Overlaps(bodyRect))
+                            for (int j = 0; j < rectsBody.Length; j++)
                             {
-                                hitPoint = dmgRect.center;
-                                return true;
+                                var bodyRect = rectsBody[j];
+                                if (bodyRect.size != Vector2.zero && dmgRect.Overlaps(bodyRect))
+                                {
+                                    hitPoint = dmgRect.center;
+                                    return true;
+                                }
                             }
                         }
                     }

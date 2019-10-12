@@ -17,7 +17,7 @@ namespace DefaultNamespace.SkillPlayable
         public abstract void OnPlay();
         public abstract void OnProcess();
         public abstract void OnExit();
-
+        
         public SkillPlayBehaviour behavour;
         
         public EPlayableNodeProcessState Process(float directorTime)

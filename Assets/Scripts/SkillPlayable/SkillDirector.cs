@@ -44,48 +44,20 @@ namespace DefaultNamespace.SkillPlayable
                     SkillPlayBehavNodeBase node = null;
                     if (playableNodeData.type == EPlayableNodeType.Effect)
                     {
-                        node = CreatePlayableEffNode(playableNodeData);
+                        node = SkillPlayNode_CreateEff.CreateBehavNode(playableNodeData);
                     }
                     else if (playableNodeData.type == EPlayableNodeType.PlayAnim)
                     {
-                        node = CreatePlayableAnimNode(playableNodeData);
+                       node = SkillPlayNode_PlayAnim.CreateBehavNode(playableNodeData);
+                    }
+                    else if (playableNodeData.type == EPlayableNodeType.Move)
+                    {
+                        node = SkillPlayNode_Move.CreateBehavNode(playableNodeData);
                     }
                     
                     AddBehavNode(node);
                 }
             }
-        }
-
-        private SkillPlayBehavNodeBase CreatePlayableAnimNode(PlayableNodeData playableNodeData)
-        {
-            var animData = GameDataMgr.Inst.playableNodeAnimTable.GetData(playableNodeData.targetId);
-            var node = new SkillPlayNode_PlayAnim
-            {
-                timeStart = playableNodeData.frameRange.start / 60f,
-                timeDur = (playableNodeData.frameRange.end - playableNodeData.frameRange.start) / 60f,
-                data = new SkillPlayData_Anim
-                {
-                    anim = animData.anim
-                }
-            };
-            return node;
-        }
-
-        private SkillPlayBehavNodeBase CreatePlayableEffNode(PlayableNodeData playableNodeData)
-        {
-            var effData = GameDataMgr.Inst.playableNodeEffectTable.GetData(playableNodeData.targetId);
-            var node = new SkillPlayNode_CreateEff
-            {
-                timeStart = playableNodeData.frameRange.start / 60f,
-                timeDur = (playableNodeData.frameRange.end - playableNodeData.frameRange.start) / 60f,
-                effData = new SkillPlayData_Eff
-                {
-                    eff = effData.eff,
-                    point = effData.point,
-                    offset = effData.offset
-                }
-            };
-            return node;
         }
 
         public void AddBehavNode(SkillPlayBehavNodeBase node)

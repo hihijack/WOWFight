@@ -1,4 +1,5 @@
 ﻿using System;
+using BehaviorDesigner.Runtime;
 using DefaultNamespace.AI;
 using DefaultNamespace.AICore;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace DefaultNamespace.Entitys
         private AISensoryMemory _sensoryMemory;
         private BaseInput _cmds;
 
+        private BehaviorTree _behaviorTree;
+        
         public bool enableAI;
         
         protected override void Awake()
@@ -20,29 +23,71 @@ namespace DefaultNamespace.Entitys
             _sensoryMemory = new AISensoryMemory(this);
             brain = new AIGoal_Think(this);
             _cmds = new BaseInput();
+            _behaviorTree = GetComponent<BehaviorTree>();
+            _behaviorTree.SetVariableValue("owner", this);
         }
 
         protected override void Start()
         {
             base.Start();
-            
+            if (enableAI)
+            {
+                _behaviorTree.EnableBehavior();
+            }
         }
 
         protected override void Update()
         {
-            base.Update();
-            
-            _sensoryMemory.UpdateVision();
-
-            if (enableAI)
+            if (alive)
             {
-                brain.Process();
-                if (Time.frameCount % 60 == 0)
+                base.Update();
+            
+                _sensoryMemory.UpdateVision();
+
+                if (!enableAI)
                 {
-                    brain.Arbitare();
+                    _behaviorTree.DisableBehavior();
+                }
+                
+                if (enableAI)
+                {
+/*                    brain.Process();
+                    if (Time.frameCount % 60 == 0)
+                    {
+                        brain.Arbitare();
+                    }*/
+                    ProcSetData();
                 }
             }
+            else
+            {
+                _behaviorTree.StopAllTaskCoroutines();
+            }
+        }
 
+        /// <summary>
+        /// 更新设置AI行为树需要的数据
+        /// </summary>
+        private void ProcSetData()
+        {
+           _behaviorTree.SetVariableValue("dangerDes", CalDangerDes());
+           _behaviorTree.SetVariableValue("hpPercent", GetInfoData().hpPercent);
+           _behaviorTree.SetVariableValue("target", GetSensoryMemory().target);
+        }
+
+        
+        public float CalDangerDes()
+        {
+            float r = 0;
+            RoleUnit target = GetSensoryMemory().target;
+            if (target != null)
+            {
+                if (CheckDisIsNear(target, 2) && (target.CharaCtl.IsInState(EBSType.SKill) || target.CharaCtl.IsInState(EBSType.Power)))
+                {
+                    r = 1;
+                }
+            }
+            return r;
         }
         
         public AISensoryMemory GetSensoryMemory()
@@ -121,6 +166,12 @@ namespace DefaultNamespace.Entitys
             }
         }
 
+        public void CommandStopRun()
+        {
+            _cmds.cMove.h = 0;
+            CharaCtl.SendCommand(_cmds.cMove);
+        }
+        
         public AIGoal_Think GetBrain()
         {
             return brain;
@@ -131,9 +182,9 @@ namespace DefaultNamespace.Entitys
             return aiCfg.patrolPoints;
         }
 
-        public void CommandAttack()
+        public void CommandAttack(int skillID)
         {
-            _cmds.cSkill.skillID = 2;
+            _cmds.cSkill.skillID = skillID;
             CharaCtl.SendCommand(_cmds.cSkill);
         }
 

@@ -6,6 +6,9 @@ public class CharacterInfo
     public int hpMax;
     public int hpCur;
     public ECamp camp;
+    public float hpPercent {
+        get { return (float)hpCur / hpMax; }
+    }
 }
 
 /// <summary>

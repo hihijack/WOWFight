@@ -14,5 +14,6 @@ namespace DefaultNamespace.GameData
         public SkillTable skillTable;
         public PlayableNodeAnimTable playableNodeAnimTable;
         public PlayableNodeEffectTable playableNodeEffectTable;
+        public PlayableNodeMoveTable palyableNodeMoveTable;
     }
 }

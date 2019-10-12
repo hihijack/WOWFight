@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace.GameData;
+using UnityEngine;
 
 namespace DefaultNamespace.SkillPlayable
 {  
@@ -20,10 +21,28 @@ namespace DefaultNamespace.SkillPlayable
 
         public override void OnProcess()
         {
+           
         }
 
         public override void OnExit()
         {
+        }
+        
+        public static SkillPlayBehavNodeBase CreateBehavNode(PlayableNodeData playableNodeData)
+        {
+            var effData = GameDataMgr.Inst.playableNodeEffectTable.GetData(playableNodeData.targetId);
+            var node = new SkillPlayNode_CreateEff
+            {
+                timeStart = playableNodeData.frameRange.start / 60f,
+                timeDur = (playableNodeData.frameRange.end - playableNodeData.frameRange.start) / 60f,
+                effData = new SkillPlayData_Eff
+                {
+                    eff = effData.eff,
+                    point = effData.point,
+                    offset = effData.offset
+                }
+            };
+            return node;
         }
     }
 }

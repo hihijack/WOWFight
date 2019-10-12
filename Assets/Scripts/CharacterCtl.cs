@@ -427,4 +427,13 @@ public class CharacterCtl : MonoBehaviour {
 
         return r;
     }
+
+    /// <summary>
+    /// 移动
+    /// </summary>
+    /// <param name="moveDelta"></param>
+    public void Translate(Vector2 moveDelta)
+    {
+       transform.Translate(0f, moveDelta.y, moveDelta.x, Space.Self);
+    }
 }
