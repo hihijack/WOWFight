@@ -7,6 +7,8 @@ namespace DefaultNamespace
         private ParticleSystem[] pss;
 
         private EffLifeTimer timer;
+
+        private EffAudioPlay effAudioPlay;
         
         private void Awake()
         {
@@ -25,7 +27,17 @@ namespace DefaultNamespace
             {
                 //使用预制配置时间
                 timer.StartLife(); 
-            }  
+            }
+
+            if (effAudioPlay == null)
+            {
+                effAudioPlay = GetComponent<EffAudioPlay>();
+            }
+
+            if (effAudioPlay != null)
+            {
+                effAudioPlay.Play();
+            }
         }
     }
 }

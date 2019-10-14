@@ -12,39 +12,68 @@ namespace DefaultNamespace.AIBehavoirTree
         public SharedObject owner;
         public int skillID;
         private RoleUnit_NPC roleOwner;
-        private float mStartTime;
         
+        private float stuckDur;
+        private bool hasToState;
         public override void OnStart()
         {
             roleOwner = owner.Value as RoleUnit_NPC;
-            mStartTime = Time.time;
+            stuckDur = 0;
+            hasToState = false;
+            roleOwner.CommandAttack(skillID); 
         }
 
         public override TaskStatus OnUpdate()
         {
+//            if (!roleOwner.alive)
+//            {
+//                return TaskStatus.Failure;
+//            }
+//            
+//            if (roleOwner.CharaCtl.IsInState(EBSType.SKill))
+//            {
+//                return TaskStatus.Success;
+//            }
+//            else
+//            {
+//                mStuckDur += Time.deltaTime;
+//                if (mStuckDur > 0.1f)
+//                {
+//                    return TaskStatus.Failure;
+//                }
+//                else
+//                {
+//                    roleOwner.CommandAttack(skillID); 
+//                    return TaskStatus.Running;
+//                }
+//            }
             if (!roleOwner.alive)
             {
                 return TaskStatus.Failure;
             }
-            
-            if (roleOwner.CharaCtl.IsInState(EBSType.SKill))
+
+
+            if (!roleOwner.CharaCtl.IsInState(EBSType.SKill))
+            {
+                stuckDur += Time.deltaTime;
+                if (stuckDur >= 0.1f)
+                {
+                    return TaskStatus.Failure;
+                }
+            }
+
+            if (hasToState && !roleOwner.CharaCtl.IsInState(EBSType.SKill))
             {
                 return TaskStatus.Success;
             }
-            else if (IsStuck())
-            {
-                return TaskStatus.Failure;
-            }
             else
             {
-                roleOwner.CommandAttack(skillID);
+                if (roleOwner.CharaCtl.IsInState(EBSType.SKill))
+                {
+                    hasToState = true;
+                }
+                return TaskStatus.Running;
             }
-            return TaskStatus.Running;
-        }
-        
-        private bool IsStuck()
-        {
-            return Time.time - mStartTime > Time.deltaTime * 2;
         }
     }
 }

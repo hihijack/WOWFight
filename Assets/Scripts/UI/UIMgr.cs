@@ -13,6 +13,11 @@ namespace UI
         public GameObject goTarget;
         public Slider sldTargetHP;
         public Text txtTargetHP;
+
+        public UIGameOver uiGameOver;
+        public UIGameWin uiGameWin;
+        public GameObject goUIControlTip;
+        public GameObject goUISummonTip;
         
         private void Awake()
         {
@@ -52,6 +57,26 @@ namespace UI
             {
                 goTarget.SetActive(false);
             }
+        }
+
+        public void ShowUIGameOver()
+        {
+            uiGameOver.Show();
+        }
+
+        public void ShowUIGameWin()
+        {
+            uiGameWin.Show();
+        }
+
+        public void TogUIControlTip(bool visible)
+        {
+            goUIControlTip.active = visible;
+        }
+
+        public void TogUISummonTip(bool visible)
+        {
+            goUISummonTip.active = visible;
         }
     }
 }

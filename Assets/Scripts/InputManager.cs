@@ -98,5 +98,10 @@ public class InputManager : BaseInput
             cMove.v = axisV;
             GameManager.Inst.targetRole.CharaCtl.SendCommand(cMove);
         }
+
+        if (Input.GetButtonDown("A") && GameManager.Inst.curStayTrigger != null)
+        {
+            GameManager.Inst.curStayTrigger.OnActive();
+        }
     }
 }

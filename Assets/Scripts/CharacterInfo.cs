@@ -1,6 +1,9 @@
-﻿/// <summary>
+﻿using System;
+
+/// <summary>
 /// 角色属性：生命，护甲等
 /// </summary>
+[Serializable]
 public class CharacterInfo
 {
     public int hpMax;

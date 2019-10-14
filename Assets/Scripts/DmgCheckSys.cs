@@ -44,12 +44,12 @@ namespace DefaultNamespace
             
             if (!_opening) return;
                 
-            if (_charaCtl.RoleUnit.camp == ECamp.Allies)
+            if (_charaCtl.RoleUnit._data.camp == ECamp.Allies)
             {
                 //遍历所有敌人
                 foreach (var roleT in GameManager.Inst.aiCtls)
                 {
-                    if (roleT.CharaCtl == _charaCtl || !roleT.CharaCtl.hurtedEnable || _extends.Contains(roleT.CharaCtl))
+                    if (!roleT.gameObject.activeInHierarchy || roleT.CharaCtl == _charaCtl || !roleT.CharaCtl.hurtedEnable || _extends.Contains(roleT.CharaCtl))
                     {
                         continue;
                     }
@@ -61,7 +61,7 @@ namespace DefaultNamespace
                         _extends.Add(roleT.CharaCtl);
                     }
                 }
-            }else if (_charaCtl.RoleUnit.camp == ECamp.Monster)
+            }else if (_charaCtl.RoleUnit._data.camp == ECamp.Monster)
             {
                     
                 //检测玩家

@@ -135,7 +135,7 @@ namespace DefaultNamespace.GameData
         Normal,//普通
         Stab, //刺击
         Proj, //投射物
-        Engrgy //能量
+        Energy //能量
     }
     
     [Serializable]

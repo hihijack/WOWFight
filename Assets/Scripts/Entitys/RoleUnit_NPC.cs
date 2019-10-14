@@ -28,15 +28,6 @@ namespace DefaultNamespace.Entitys
             _behaviorTree.SetVariableValue("owner", this);
         }
 
-        protected override void Start()
-        {
-            base.Start();
-            if (enableAI)
-            {
-                _behaviorTree.EnableBehavior();
-            }
-        }
-
         protected override void Update()
         {
             if (alive)
@@ -48,6 +39,10 @@ namespace DefaultNamespace.Entitys
                 if (!enableAI)
                 {
                     _behaviorTree.DisableBehavior();
+                }
+                else
+                {
+                    _behaviorTree.EnableBehavior();
                 }
                 
                 if (enableAI)

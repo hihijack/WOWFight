@@ -57,10 +57,13 @@ public class CharacterCtl : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        ExcCommands();
-        mFSMManager.Update();
-        _dmgCheckSys.Update();
-        mCommands.Clear();
+        if (RoleUnit.alive)
+        {
+            ExcCommands();
+            mFSMManager.Update();
+            _dmgCheckSys.Update();
+            mCommands.Clear(); 
+        }
     }
 
     private void OnDrawGizmos()

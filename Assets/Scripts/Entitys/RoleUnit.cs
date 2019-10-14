@@ -8,9 +8,10 @@ namespace DefaultNamespace.Entitys
     {
         private CharacterCtl _charaCtl;
         
-        CharacterInfo _data;
+        [SerializeField]
+        public CharacterInfo _data;
 
-        public ECamp camp;
+        //public ECamp camp;
         
         public bool alive = true;
         
@@ -18,7 +19,7 @@ namespace DefaultNamespace.Entitys
         {
             _charaCtl = GetComponent<CharacterCtl>();
             _charaCtl.RoleUnit = this;
-            InitInfoData();
+            //InitInfoData();
         }
 
 
@@ -27,7 +28,6 @@ namespace DefaultNamespace.Entitys
             _data = new CharacterInfo();
             _data.hpMax = 500;
             _data.hpCur = 500;
-            _data.camp = camp;
         }
         
         public CharacterInfo GetInfoData()
@@ -96,6 +96,7 @@ namespace DefaultNamespace.Entitys
         {
             CharaCtl.HandleDead();
             alive = false;
+            GameManager.Inst.OnUnitDie(this);
         }
         
         /// <summary>
