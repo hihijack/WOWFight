@@ -88,7 +88,7 @@ public class InputManager : BaseInput
         if (Input.GetButtonDown("LT"))
         {
             //TODO
-            cSkill.skillID = 4;
+            cSkill.skillID = 5;
             GameManager.Inst.targetRole.CharaCtl.SendCommand(cSkill);
         }
         

@@ -34,6 +34,7 @@ namespace DefaultNamespace.GameData
         
         [Title("身位盒", HorizontalLine = false)] public SkillBoxInfo[] bodys;
         [Header("伤害盒")] public SkillBoxInfo[] dmgBoxs;
+        [Header("碰撞盒")] public SkillBoxInfo[] colliderBoxs;
 
         [Title("表现")]
         public PlayableNodeData[] playableDatas;
@@ -69,6 +70,22 @@ namespace DefaultNamespace.GameData
             if (bodys != null && bodys.Length > 0)
             {
                 foreach (var t in bodys)
+                {
+                    if (frame >= t.frameRanges.start && frame <= t.frameRanges.end)
+                    {
+                        return t;
+                    }
+                }
+            }
+
+            return new SkillBoxInfo();
+        }
+
+        public SkillBoxInfo FindColliderBoxInfo(int frame)
+        {
+            if (colliderBoxs != null && colliderBoxs.Length > 0)
+            {
+                foreach (var t in colliderBoxs)
                 {
                     if (frame >= t.frameRanges.start && frame <= t.frameRanges.end)
                     {

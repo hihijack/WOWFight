@@ -154,5 +154,26 @@ namespace DefaultNamespace.SkillPlayable
             }
             return null;
         }
+
+        /// <summary>
+        /// 取当前碰撞盒信息
+        /// </summary>
+        /// <returns></returns>
+        public SKillRect[] GetCurColliderBox()
+        {
+            if (SkillId > 0 && Frame > 0)
+            {
+                SKillDataNode data = GameDataMgr.Inst.skillTable.GetData(skillID);
+                if (data.isValid())
+                {
+                    var skillBoxInfo = data.FindColliderBoxInfo(Frame);
+                    if (skillBoxInfo.isValid())
+                    {
+                        return skillBoxInfo.rects;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

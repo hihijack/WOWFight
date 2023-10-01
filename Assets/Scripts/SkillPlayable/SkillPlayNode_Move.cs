@@ -19,7 +19,8 @@ namespace DefaultNamespace.SkillPlayable
 
         public override void OnProcess()
         {
-            behavour.GetDirector().GetOwner().Translate(data.speed * Time.deltaTime);
+            //behavour.GetDirector().GetOwner().Translate(data.speed * Time.deltaTime);
+            behavour.GetDirector().GetOwner().PhyTranslate(data.speed * Time.deltaTime);
         }
 
         public override void OnExit()

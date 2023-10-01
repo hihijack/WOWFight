@@ -439,4 +439,9 @@ public class CharacterCtl : MonoBehaviour {
     {
        transform.Translate(0f, moveDelta.y, moveDelta.x, Space.Self);
     }
+
+    public void PhyTranslate(Vector2 moveDelta)
+    {
+        cc.Move(transform.TransformVector(new Vector3( 0f, moveDelta.y, moveDelta.x)));
+    }
 }
